@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "sucrase": "^3.12.1",
+    "typescript": "^3.8.3"
+  }
+}
