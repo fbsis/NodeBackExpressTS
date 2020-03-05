@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "prod": "node src/index.ts",
     "dev": "nodemon src/index.ts",
     "build": "",
     "test": "jest "
