@@ -18,18 +18,21 @@ class ContatoController {
   }
 
   public async Create(request: Request, response: Response) {
-    const allContatos = contatoService.CreateContatos(request.body);
+    const create = await contatoService.CreateContatos(request.body);
+    response.json(create);
+  }
+
+  public async Update(request: Request, response: Response) {
+    const allContatos = await contatoService.UpdateContatos(
+      request.params.id,
+      request.body
+    );
+
     response.json(allContatos);
   }
 
-   public async Update(request: Request, response: Response) {
-     const allContatos = contatoService.UpdateContatos(request.params.id, request.body);
-
-     response.json(allContatos);
-   }
-
   public async Delete(request: Request, response: Response) {
-    const allContatos = contatoService.RemoveContatos(request.params.id);
+    const allContatos = await contatoService.RemoveContatos(request.params.id);
 
     response.json(allContatos);
   }

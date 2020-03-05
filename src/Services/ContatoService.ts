@@ -7,7 +7,8 @@ class ContatoService {
   }
 
   async CreateContatos(body: any) {
-    return await Contato.create(body);
+    const create = await Contato.create(body);
+    return create;
   }
 
   async getOne(id: String) {
@@ -15,7 +16,9 @@ class ContatoService {
   }
 
   async UpdateContatos<ContatoInterface>(id: String, body: ContatoInterface) {
-    return await Contato.findOneAndUpdate(id, body);
+    const update = await Contato.findByIdAndUpdate(id, body)
+
+    return update;
   }
 
   async RemoveContatos(id: String) {
