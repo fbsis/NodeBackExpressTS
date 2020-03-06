@@ -12,5 +12,6 @@ Rest Services to make a simple contato center manager
 Make a little evolution to make more extensive
 
 # How to see in action (on dev)
-yarn dev
-acess on port 3000
+- execute 'yarn' on the folder of the project, to install all the dependency
+- 'yarn dev' to run
+- acess on localhost port 3000
