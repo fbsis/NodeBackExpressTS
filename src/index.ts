@@ -16,9 +16,7 @@ class App {
   }
 
   public DataBase() {
-    const uri =
-      "mongodb+srv://testNode:izOCHc82PXp7vkhm@cluster0-kzcer.mongodb.net/test?retryWrites=true&w=majority";
-    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
   }
 }
-module.exports = new App().express.listen(3000);
+export default new App().express.listen(process.env.PORT);
