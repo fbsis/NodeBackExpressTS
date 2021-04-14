@@ -15,3 +15,10 @@ Make a little evolution to make more extensive
 - execute 'yarn' on the folder of the project, to install all the dependency
 - 'yarn dev' to run
 - acess on localhost port 3000
+- Copy to root the .env file
+
+```
+PORT=3000
+MONGO = mongodb+srv://testNode:izOCHc82PXp7vkhm@cluster0-kzcer.mongodb.net/test?retryWrites=true&w=majority
+
+```
